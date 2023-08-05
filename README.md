@@ -14,3 +14,14 @@ The example uses the XVID codec and 640x480 resolution, but you can modify these
 
 2. ex2.py
 The camera initialization takes too much time in ex1.py, so I created ex2.py that is able to use another way to handle the video recording per minute.
+
+3. ex3.py 
+This example demonstrates how to convert from the Mat to the qPixmap.
+In the model folder, open cv_utilty.py and take a look at "mat_to_qpixmap" method.
+First, check that how many channels does the input mat data have.
+Second, copy the data from the Mat to the QImage.
+Finally, convert QImage to QPixmap. If the Mat uses BGR order, convert it to RGB before converting to QPixmap.
+
+In VideoRecorder class, a new_frame_grabbed signal was added in order to notify the GUI.
+As the slot called on_new_frame_grabbed received the signal, it will show the frame
+on the GUI immediately. 
