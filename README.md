@@ -29,3 +29,5 @@ on the GUI immediately.
 4. ex4.py
     The example rewrites ex3.py according to MVC architecture. MVC means model, view and controller, that can help users
 to maintain their codes more easier.
+
+GetMind: https://gitmind.com/app/docs/mcg3hrvx
